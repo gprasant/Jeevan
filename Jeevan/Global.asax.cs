@@ -8,6 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Data.Entity;
 using Jeevan.Database;
+using Jeevan.Logging;
 
 namespace Jeevan
 {
@@ -40,7 +41,8 @@ namespace Jeevan
 
         protected void Application_Start()
         {
-            System.Data.Entity.Database.SetInitializer(new RecreateDatabaseWithSeedData());
+            System.Data.Entity.Database.SetInitializer(new CreateDatabaseIfNotExists<Jeevan.Database.DBContext>);
+            new LogEvent("Completed db Setup")
             AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);

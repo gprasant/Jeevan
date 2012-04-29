@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using Jeevan.Models;
+using Jeevan.Logging;
 
 namespace Jeevan.Database
 {
@@ -19,6 +20,7 @@ namespace Jeevan.Database
             context.CordBloodUnits.Add(new CordBloodUnit() { HLA_A1 = 1, HLA_A2 = 33, HLA_B1 = 15, HLA_B2 = 37, HLA_C1 = 4, HLA_C2 = 06, DRB_1 = 10, DRB_2 = 15, DQB_1 = 05, DQB_2 = 05 });
 
             base.Seed(context);
+            
         }
     }
 }
