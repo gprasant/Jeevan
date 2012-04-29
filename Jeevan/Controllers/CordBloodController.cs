@@ -23,28 +23,11 @@ namespace Jeevan.Controllers
 
         public ViewResult Index(int start = 0, int itemsPerPage = 20, string orderBy = "ID", bool desc = false)
         {
-            try
-            {
-                ViewBag.Count = db.CordBloodUnits.Count();
-                ViewBag.Start = start;
-                ViewBag.ItemsPerPage = itemsPerPage;
-                ViewBag.OrderBy = orderBy;
-                ViewBag.Desc = desc;
-            }
-            catch (DataException e)
-            {
-                foreach (var eve in (e.InnerException as DbEntityValidationException).EntityValidationErrors)
-                {
-                    Debug.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
-                        eve.Entry.Entity.GetType().Name, eve.Entry.State);
-                    foreach (var ve in eve.ValidationErrors)
-                    {
-                        Debug.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
-                            ve.PropertyName, ve.ErrorMessage);
-                    }
-                }
-                throw;
-            }
+            ViewBag.Count = db.CordBloodUnits.Count();
+            ViewBag.Start = start;
+            ViewBag.ItemsPerPage = itemsPerPage;
+            ViewBag.OrderBy = orderBy;
+            ViewBag.Desc = desc;
             return View();
         }
 
