@@ -30,7 +30,6 @@ obj/
 [Dd]ebug*/
 [Rr]elease*/
 Backup/
-packages/
 Ankh.NoLoad
 UpgradeLog.XML
 _UpgradeReport_Files/
@@ -54,7 +53,7 @@ _ReSharper*/
 ~$*
 
 #NuGet
-packages/
+
 
 #ncrunch
 *ncrunch*
