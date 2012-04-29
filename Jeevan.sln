@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jeevan", "Jeevan\Jeevan.csproj", "{601D2BB8-9F99-4406-9D63-656E3E9FE25B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jeevan.Tests", "Jeevan.Tests\Jeevan.Tests.csproj", "{08756713-63CD-484B-B221-F176E5FEA423}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08756713-63CD-484B-B221-F176E5FEA423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08756713-63CD-484B-B221-F176E5FEA423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08756713-63CD-484B-B221-F176E5FEA423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08756713-63CD-484B-B221-F176E5FEA423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{601D2BB8-9F99-4406-9D63-656E3E9FE25B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{601D2BB8-9F99-4406-9D63-656E3E9FE25B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{601D2BB8-9F99-4406-9D63-656E3E9FE25B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{601D2BB8-9F99-4406-9D63-656E3E9FE25B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

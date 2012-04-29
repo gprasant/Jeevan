@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Jeevan.Models.CordBloodUnit>
+
+@foreach (var item in Model) {
+    <tr data-pkey="@item.ID">
+        <td>
+            @Html.DisplayFor(modelItem => item.HLA_A1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLA_A2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLA_B1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLA_B2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLA_C1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLA_C2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DRB_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DRB_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DQB_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DQB_2)
+        </td>
+        <td class="rowControl hidden">
+            <a href="#makeRowEditable" class="makeRowEditable">Edit</a> |
+            <a href="#deleteRow" class="deleteRow">Delete</a>
+        </td>
+    </tr>
+}
