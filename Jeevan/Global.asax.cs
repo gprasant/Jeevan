@@ -41,8 +41,8 @@ namespace Jeevan
 
         protected void Application_Start()
         {
-            System.Data.Entity.Database.SetInitializer(new CreateDatabaseIfNotExists<Jeevan.Database.DBContext>);
-            new LogEvent("Completed db Setup")
+            System.Data.Entity.Database.SetInitializer(new CreateDatabaseIfNotExists<Jeevan.Database.DBContext>());
+            new LogEvent("Completed db Setup");
             AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);
