@@ -7,7 +7,7 @@ using Jeevan.Models;
 
 namespace Jeevan.Database
 {
-    public class RecreateDatabaseWithSeedData : DropCreateDatabaseAlways<Jeevan.Database.DBContext>
+    public class RecreateDatabaseWithSeedData : CreateDatabaseIfNotExists<Jeevan.Database.DBContext>
     {
         protected override void Seed(DBContext context)
         {
