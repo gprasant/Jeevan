@@ -8,9 +8,9 @@ using Jeevan.Logging;
 
 namespace Jeevan.Database
 {
-    public class RecreateDatabaseWithSeedData : CreateDatabaseIfNotExists<Jeevan.Database.DBContext>
+    public class RecreateDatabaseWithSeedData : DropCreateDatabaseIfModelChanges<Jeevan.Database.JeevanDBContext>
     {
-        protected override void Seed(DBContext context)
+        protected override void Seed(JeevanDBContext context)
         {
             context.CordBloodUnits.Add(new CordBloodUnit() { HLA_A1 = 2, HLA_A2 = 24, HLA_B1 = 18, HLA_B2 = 40, HLA_C1 = 12, HLA_C2 = 15, DRB_1 = 11, DRB_2 = 14, DQB_1 = 03, DQB_2 = 05 });
             context.CordBloodUnits.Add(new CordBloodUnit(){HLA_A1=1, HLA_A2=32, HLA_B1=15, HLA_B2= 57, HLA_C1 = 6 , HLA_C2 = 07, DRB_1 = 15, DRB_2 = 16 , DQB_1 = 05, DQB_2 = 05});

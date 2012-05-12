@@ -35,14 +35,14 @@ namespace Jeevan
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "CordBlood", action = "Index", id = UrlParameter.Optional }
             );
         }
 
         protected void Application_Start()
         {
-            System.Data.Entity.Database.SetInitializer(new CreateDatabaseIfNotExists<Jeevan.Database.DBContext>());
-            new LogEvent("Completed db Setup");
+            System.Data.Entity.Database.SetInitializer(new RecreateDatabaseWithSeedData());
+            //new LogEvent("Completed db Setup");
             AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);

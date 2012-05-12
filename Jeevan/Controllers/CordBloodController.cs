@@ -16,7 +16,7 @@ namespace Jeevan.Controllers
 {
     public class CordBloodController : Controller
     {
-        private DBContext db = new DBContext();
+        private JeevanDBContext db = new JeevanDBContext();
 
         //
         // GET: /CordBlood/
