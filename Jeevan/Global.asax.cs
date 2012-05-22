@@ -41,7 +41,7 @@ namespace Jeevan
 
         protected void Application_Start()
         {
-            System.Data.Entity.Database.SetInitializer(new RecreateDatabaseWithSeedData());
+            System.Data.Entity.Database.SetInitializer(new CreateDatabaseIfNotExists<JeevanDBContext>());
             //new LogEvent("Completed db Setup");
             AreaRegistration.RegisterAllAreas();
 
