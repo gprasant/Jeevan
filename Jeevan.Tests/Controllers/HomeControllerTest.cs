@@ -13,6 +13,12 @@ namespace Jeevan.Tests.Controllers
     public class HomeControllerTest
     {
         [TestMethod]
+        public void zz()
+        {
+            
+        }
+
+        [TestMethod]
         public void Index()
         {
             // Arrange

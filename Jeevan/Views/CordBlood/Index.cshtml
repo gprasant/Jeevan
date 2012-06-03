@@ -60,21 +60,7 @@
 
 <div id="AjaxGridContainer">
     
-    <div class="row show-grid">
-        <form>
-            <div class="span1"><input type="text" name="HLA_A1" class="HLASearchBox"></div>
-            <div class="span1"><input type="text" name="HLA_A2" class="HLASearchBox"/></div>
-            <div class="span1"><input type="text" name="HLA_B1" class="HLASearchBox"/></div>
-            <div class="span1"><input type="text" name="HLA_B2" class="HLASearchBox"/></div>
-            <div class="span1"><input type="text" name="HLA_DRB1" class="HLASearchBox"/></div>
-            <div class="span1"><input type="text" name="HLA_DRB2" class="HLASearchBox"/></div>
-
-            <div class="span1 offset1"><input type="text" name="HLA_DQB1" class="HLASearchBox"/></div>
-            <div class="span1"><input type="text" name="HLA_DQB2" class="HLASearchBox"/></div>
-            <div class="span1"><input type="text" name="HLA_C1" class="HLASearchBox"/></div>
-            <div class="span1"><input type="text" name="HLA_C2" class="HLASearchBox"/></div>
-        </form>
-    </div>
+  @Html.Partial("_Search")
     <p>
         <a href="#insertEmptyRow" class="insertEmptyRow hidden">Create New</a>
     </p>
@@ -152,9 +138,10 @@
     #AjaxGridContainer .AjaxGridNavigation .itemsPerPage { float: right; }
 </style>
 
+<script src="~/Scripts/CommonScripts.js"></script>
 <script>
     (function($, undefined) {
-        var totalRowCount = @ViewBag.Count,
+        var totalRowCount = @ViewBag.Count ,
             currentPage = 1,
             pageCount = @pageCount,
             savedParams = {
