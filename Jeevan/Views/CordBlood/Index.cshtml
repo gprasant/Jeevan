@@ -68,6 +68,11 @@
     <table id="AjaxGrid" border="1">
         <thead>
             <tr>
+                <th data-column-name="Id">
+                    <span class="reorder">@Html.DisplayNameFor(model => model.ID)</span>
+                    <a href="@Url.RouteUrl(new { orderBy = "ID", desc = true })" class="uparrow">&uarr;</a>
+                    <a href="@Url.RouteUrl(new { orderBy = "ID" })" class="downarrow">&darr;</a>
+                </th>
                 <th data-column-name="HLA_A1">
                     <span class="reorder">@Html.DisplayNameFor(model => model.HLA_A1)</span>
                     <a href="@Url.RouteUrl(new { orderBy = "HLA_A1", desc = true })" class="uparrow">&uarr;</a>
@@ -129,7 +134,7 @@
 </div>
 
 <style>
-    #AjaxGrid, #AjaxGrid input, #AjaxGrid button { clear: both; width: 100%; }
+    #AjaxGrid, #AjaxGrid input, #AjaxGrid button { clear: both; width: 70%; }
     #AjaxGrid thead { white-space: nowrap; }
     #AjaxGrid thead a, #AjaxGridContainer .AjaxGridNavigation a { text-decoration: none; }
     #AjaxGrid .error { background-color: #f66; color: #000; }
