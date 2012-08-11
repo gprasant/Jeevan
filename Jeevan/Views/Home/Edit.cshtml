@@ -1,0 +1,56 @@
+﻿@model Jeevan.Models.CordBloodUnit
+
+<tr @if (Model != null) {
+        @:data-pkey="@Model.ID"
+    }>
+    <td align="center">
+        @Html.DisplayFor(model => model.ID)
+    </td>
+    <td align="center">
+        @Html.EditorFor(model => model.HLA_A1)
+        @Html.ValidationMessageFor(model => model.HLA_A1)
+    </td>
+    <td align="center">
+        @Html.EditorFor(model => model.HLA_A2)
+        @Html.ValidationMessageFor(model => model.HLA_A2)
+    </td>
+    <td align="center">
+        @Html.EditorFor(model => model.HLA_B1)
+        @Html.ValidationMessageFor(model => model.HLA_B1)
+    </td>
+    <td align="center">
+        @Html.EditorFor(model => model.HLA_B2)
+        @Html.ValidationMessageFor(model => model.HLA_B2)
+    </td>
+    <td align="center">
+        @Html.EditorFor(model => model.HLA_C1)
+        @Html.ValidationMessageFor(model => model.HLA_C1)
+    </td>
+    <td align="center">
+        @Html.EditorFor(model => model.HLA_C2)
+        @Html.ValidationMessageFor(model => model.HLA_C2)
+    </td>
+    <td align="center">
+        @Html.EditorFor(model => model.DRB_1)
+        @Html.ValidationMessageFor(model => model.DRB_1)
+    </td>
+    <td align="center">
+        @Html.EditorFor(model => model.DRB_2)
+        @Html.ValidationMessageFor(model => model.DRB_2)
+    </td>
+    <td align="center">
+        @Html.EditorFor(model => model.DQB_1)
+        @Html.ValidationMessageFor(model => model.DQB_1)
+    </td>
+    <td align="center">
+        @Html.EditorFor(model => model.DQB_2)
+        @Html.ValidationMessageFor(model => model.DQB_2)
+    </td>
+    <td>
+        @if (ViewContext.RouteData.Values["Action"].ToString() == "Edit") {
+            <button class="editRow">Save</button><button class="cancelEditRow">Cancel</button>
+        } else {
+            <button class="createRow">Create</button><button class="cancelCreateRow">Cancel</button>
+        }
+    </td>
+</tr>

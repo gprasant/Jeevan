@@ -140,7 +140,6 @@
     <Compile Include="Areas\Admin\Controllers\ElmahController.cs" />
     <Compile Include="Attributes\SearchableAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CordBloodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Database\RecreateDatabaseWithSeedData.cs" />
     <Compile Include="Global.asax.cs">
@@ -236,9 +235,6 @@
     <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -251,13 +247,13 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\CordBlood\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\CordBlood\GridData.cshtml" />
+    <Content Include="Views\Home\GridData.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\CordBlood\Edit.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Search.cshtml" />

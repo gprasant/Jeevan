@@ -64,7 +64,7 @@ namespace Jeevan.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("Index", "CordBlood");
+                        return RedirectToAction("Index", "Home");
                     }
                 }
                 else

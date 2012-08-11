@@ -1,9 +1,6 @@
 ﻿@model Jeevan.Models.CordBloodUnit
    <div class="row show-grid">
-       <h3 class="content-wrapper">Search</h3> <br />
-       
-     
-       @using (Ajax.BeginForm("Search", "CordBlood", new AjaxOptions() { OnSuccess="RefreshGrid", HttpMethod= "Get", InsertionMode = InsertionMode.InsertAfter }))
+       @using (Ajax.BeginForm("Search", "Home", new AjaxOptions() { OnSuccess="RefreshGrid", HttpMethod= "Get", InsertionMode = InsertionMode.InsertAfter }))
        {
            @Html.ValidationSummary()<br />
             <div class="span1">@Html.TextBoxFor(cb => cb.HLA_A1, new { placeholder = " A1 ", @class = "HLASearchBox" }) </div>
