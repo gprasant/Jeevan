@@ -50,8 +50,14 @@ namespace Jeevan.Controllers
         public ActionResult Search(int? HLA_A1, int? HLA_A2, int? HLA_B1, int? HLA_B2, int DRB_1, int DRB_2)
         {
             var searchResults = db.CordBloodUnits.Select(c => c)
-                                                    .Where(unit => unit.DRB_1 == DRB_1
-                                                           && unit.DRB_2 == DRB_2);
+                                                    .Where(unit => 
+                                                              unit.DRB_1 == DRB_1
+                                                           && unit.DRB_2 == DRB_2
+                                                           && (HLA_A1.HasValue ? unit.HLA_A1 == HLA_A1 : true)
+                                                           && (HLA_A2.HasValue ? unit.HLA_A2 == HLA_A2 : true)
+                                                           && (HLA_B1.HasValue ? unit.HLA_B1 == HLA_B1 : true)
+                                                           && (HLA_B2.HasValue ? unit.HLA_B2 == HLA_B2 : true)
+                                                           );
             return PartialView("GridData", searchResults);
         }
 
