@@ -14,6 +14,7 @@ using System.Diagnostics;
 
 namespace Jeevan.Controllers
 {
+    [Authorize]
     public class CordBloodController : Controller
     {
         private JeevanDBContext db = new JeevanDBContext();
