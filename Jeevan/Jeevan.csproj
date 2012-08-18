@@ -140,6 +140,7 @@
     <Compile Include="Areas\Admin\Controllers\ElmahController.cs" />
     <Compile Include="Attributes\SearchableAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\RequestInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Database\RecreateDatabaseWithSeedData.cs" />
     <Compile Include="Global.asax.cs">
@@ -149,6 +150,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\CordBloodUnit.cs" />
     <Compile Include="Database\JeevanDBContext.cs" />
+    <Compile Include="Models\RequestInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -257,6 +259,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Search.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\RequestInfo\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\RequestInfo\_RequestInfoPatient.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
