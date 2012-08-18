@@ -73,52 +73,53 @@
     @AjaxGridNavigation(currentPage, pageCount, currentRouteValues)
     <div class="row">
         <div class="span10">
+            <a href="#" name="MicrosoftExcelButton" data-xl-buttonStyle="Standard"></a>
             <table id="AjaxGrid" border="1" class="table table-condensed table-striped">
                 <thead>
                     <tr>
                         <th data-column-name="Id">
                             <span class="reorder">@Html.DisplayNameFor(model => model.ID)</span> <a href="@Url.RouteUrl(new { orderBy = "ID", desc = true })" class="uparrow">
-                                &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "ID" })" class="downarrow">&darr;</a>
+                                                                                                     &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "ID" })" class="downarrow">&darr;</a>
                         </th>
                         <th data-column-name="HLA_A1">
                             <span class="reorder">@Html.DisplayNameFor(model => model.HLA_A1)</span> <a href="@Url.RouteUrl(new { orderBy = "HLA_A1", desc = true })" class="uparrow">
-                                &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "HLA_A1" })" class="downarrow">&darr;</a>
+                                                                                                         &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "HLA_A1" })" class="downarrow">&darr;</a>
                         </th>
                         <th data-column-name="HLA_A2">
                             <span class="reorder">@Html.DisplayNameFor(model => model.HLA_A2)</span> <a href="@Url.RouteUrl(new { orderBy = "HLA_A2", desc = true })" class="uparrow">
-                                &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "HLA_A2" })" class="downarrow">&darr;</a>
+                                                                                                         &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "HLA_A2" })" class="downarrow">&darr;</a>
                         </th>
                         <th data-column-name="HLA_B1">
                             <span class="reorder">@Html.DisplayNameFor(model => model.HLA_B1)</span> <a href="@Url.RouteUrl(new { orderBy = "HLA_B1", desc = true })" class="uparrow">
-                                &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "HLA_B1" })" class="downarrow">&darr;</a>
+                                                                                                         &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "HLA_B1" })" class="downarrow">&darr;</a>
                         </th>
                         <th data-column-name="HLA_B2">
                             <span class="reorder">@Html.DisplayNameFor(model => model.HLA_B2)</span> <a href="@Url.RouteUrl(new { orderBy = "HLA_B2", desc = true })" class="uparrow">
-                                &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "HLA_B2" })" class="downarrow">&darr;</a>
+                                                                                                         &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "HLA_B2" })" class="downarrow">&darr;</a>
                         </th>
                         <th data-column-name="HLA_C1">
                             <span class="reorder">@Html.DisplayNameFor(model => model.HLA_C1)</span> <a href="@Url.RouteUrl(new { orderBy = "HLA_C1", desc = true })" class="uparrow">
-                                &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "HLA_C1" })" class="downarrow">&darr;</a>
+                                                                                                         &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "HLA_C1" })" class="downarrow">&darr;</a>
                         </th>
                         <th data-column-name="HLA_C2">
                             <span class="reorder">@Html.DisplayNameFor(model => model.HLA_C2)</span> <a href="@Url.RouteUrl(new { orderBy = "HLA_C2", desc = true })" class="uparrow">
-                                &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "HLA_C2" })" class="downarrow">&darr;</a>
+                                                                                                         &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "HLA_C2" })" class="downarrow">&darr;</a>
                         </th>
                         <th data-column-name="DRB_1">
                             <span class="reorder">@Html.DisplayNameFor(model => model.DRB_1)</span> <a href="@Url.RouteUrl(new { orderBy = "DRB_1", desc = true })" class="uparrow">
-                                &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "DRB_1" })" class="downarrow">&darr;</a>
+                                                                                                        &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "DRB_1" })" class="downarrow">&darr;</a>
                         </th>
                         <th data-column-name="DRB_2">
                             <span class="reorder">@Html.DisplayNameFor(model => model.DRB_2)</span> <a href="@Url.RouteUrl(new { orderBy = "DRB_2", desc = true })" class="uparrow">
-                                &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "DRB_2" })" class="downarrow">&darr;</a>
+                                                                                                        &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "DRB_2" })" class="downarrow">&darr;</a>
                         </th>
                         <th data-column-name="DQB_1">
                             <span class="reorder">@Html.DisplayNameFor(model => model.DQB_1)</span> <a href="@Url.RouteUrl(new { orderBy = "DQB_1", desc = true })" class="uparrow">
-                                &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "DQB_1" })" class="downarrow">&darr;</a>
+                                                                                                        &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "DQB_1" })" class="downarrow">&darr;</a>
                         </th>
                         <th data-column-name="DQB_2">
                             <span class="reorder">@Html.DisplayNameFor(model => model.DQB_2)</span> <a href="@Url.RouteUrl(new { orderBy = "DQB_2", desc = true })" class="uparrow">
-                                &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "DQB_2" })" class="downarrow">&darr;</a>
+                                                                                                        &uarr;</a> <a href="@Url.RouteUrl(new { orderBy = "DQB_2" })" class="downarrow">&darr;</a>
                         </th>
                         <th>
                         </th>
@@ -419,3 +420,4 @@
         });
     })(jQuery);
 </script>
+<script type="text/javascript" src="http://r.office.microsoft.com/r/rlidExcelButton?v=1&kip=1"></script>
