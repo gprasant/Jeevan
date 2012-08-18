@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using(Html.BeginForm("Create", "RequestInfo",FormMethod.Post)){
+<div id="patientInfo">
+    @Html.Partial("_RequestInfoPatient")
+</div>
+<div id="hlaInfo">
+    @Html.Partial("_Search")
+</div>
+<br /><br />
+    <div>
+        <input type="submit" name="proceed" value="Proceed" />
+        <input type="reset" name="cancel" value="Clear" />
+    </div>
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#search").hide();
+    });
+</script>
