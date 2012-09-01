@@ -2,7 +2,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@using(Html.BeginForm("Create", "RequestInfo",FormMethod.Post)){
+<form action="@Url.Action("Create")" method=post id="requestInfo">
 <div id="patientInfo">
     @Html.Partial("_RequestInfoPatient")
 </div>
@@ -14,10 +14,36 @@
         <input type="submit" name="proceed" value="Proceed" />
         <input type="reset" name="cancel" value="Clear" />
     </div>
-}
-
+</form>
+<div id="hlaResults">
+</div>
 <script type="text/javascript">
     $(function () {
         $("#search").hide();
+        $("form#requestInfo").submit(function (event) {
+            event.preventDefault();
+
+            var form = $(this);
+            $.ajax({
+                url: form.attr("action"),
+                data: form.serialize(),
+                dataType: "json",
+                type: "POST",
+                success: function (data) {
+                    console.log(data);
+                    $("#form#requestInfo").hide();
+                    var temp = '<tr>' +
+                    '<td><%= HLA1 %></td>' +
+                    '<td><%= HLA2 %></td>' +
+                    '<td><%= HLA3 %></td>' +
+                    '<td><%= HLA4 %></td>' +
+                    '<td><%= HLA5 %></td>' +
+                    '<td><%= HLA6 %></td>' +
+                    '</tr>';
+
+                }
+            });
+        });
     });
+
 </script>

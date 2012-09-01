@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Jeevan.Database;
 using Jeevan.Models;
 
 namespace Jeevan.Controllers
@@ -11,6 +12,7 @@ namespace Jeevan.Controllers
     {
         //
         // GET: /Default1/
+        private JeevanDBContext db = new JeevanDBContext();
 
         public ActionResult Index()
         {
@@ -30,6 +32,7 @@ namespace Jeevan.Controllers
 
         public ActionResult Create()
         {
+            
             return View();
         }
 
@@ -41,14 +44,26 @@ namespace Jeevan.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-                return Json(new {PatientDetails = info, CBU = cordBloodUnit});
+                var searchResults = db.CordBloodUnits.Select(c => c)
+                                                   .Where(unit =>
+                                                             unit.DRB_1 == cordBloodUnit.DRB_1
+                                                          && unit.DRB_2 == cordBloodUnit.DRB_2
+                                                          && (cordBloodUnit.HLA_A1.HasValue ? unit.HLA_A1 == cordBloodUnit.HLA_A1 : true)
+                                                          && (cordBloodUnit.HLA_A2.HasValue ? unit.HLA_A2 == cordBloodUnit.HLA_A2 : true)
+                                                          && (cordBloodUnit.HLA_B1.HasValue ? unit.HLA_B1 == cordBloodUnit.HLA_B1 : true)
+                                                          && (cordBloodUnit.HLA_B2.HasValue ? unit.HLA_B2 == cordBloodUnit.HLA_B2 : true)
+                                                          ).ToList();
+                var results = searchResults.GroupBy(x => x.GetMatchCount(cordBloodUnit), cbu => cbu, (count, samples) => new{Count = count, Samples = samples})
+                    .Where(x => x.Count == 5 || x.Count == 6);
+                return Json(results);
             }
             catch
             {
                 return View();
             }
         }
+
+        
 
         //
         // GET: /Default1/Edit/5

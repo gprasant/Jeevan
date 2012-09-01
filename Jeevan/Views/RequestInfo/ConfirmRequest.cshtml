@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "ConfirmRequest";
+}
+
+<h3>Matching Samples found</h3>
+
+@foreach (var group in ViewBag.Results)
+{ 
+    <strong>group.Count</strong><br />
+    
+    foreach (var sample in group.Samples)
+    {
+        <div>sample.DRB_1</div>
+    }
+}

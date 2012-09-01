@@ -266,6 +266,9 @@
   <ItemGroup>
     <Content Include="Views\RequestInfo\_RequestInfoPatient.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\RequestInfo\ConfirmRequest.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
