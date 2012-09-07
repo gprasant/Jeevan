@@ -37,10 +37,9 @@ namespace Jeevan.Controllers
         }
 
         //
-        // POST: /Default1/Create
+        // GET: /RequestInfo/HLAMatches
 
-        [HttpPost]
-        public ActionResult Create(RequestInfo info, CordBloodUnit cordBloodUnit)
+        public ActionResult HLAMatches(RequestInfo info, CordBloodUnit cordBloodUnit)
         {
             try
             {
@@ -55,7 +54,7 @@ namespace Jeevan.Controllers
                                                           ).ToList();
                 var results = searchResults.GroupBy(x => x.GetMatchCount(cordBloodUnit), cbu => cbu, (count, samples) => new{Count = count, Samples = samples})
                     .Where(x => x.Count == 5 || x.Count == 6);
-                return Json(results);
+                return PartialView("SearchResults", searchResults.Where(x => x.GetMatchCount(cordBloodUnit) == 5 || x.GetMatchCount(cordBloodUnit) == 6).ToList());
             }
             catch
             {

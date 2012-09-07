@@ -2,20 +2,42 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<form action="@Url.Action("Create")" method=post id="requestInfo">
-<div id="patientInfo">
-    @Html.Partial("_RequestInfoPatient")
-</div>
-<div id="hlaInfo">
-    @Html.Partial("_Search")
-</div>
-<br /><br />
-    <div>
-        <input type="submit" name="proceed" value="Proceed" />
-        <input type="reset" name="cancel" value="Clear" />
-    </div>
-</form>
-<div id="hlaResults">
+<h3>Ajax Form</h3>
+@using (Ajax.BeginForm("HLAMatches",
+                new AjaxOptions()
+                {
+                    HttpMethod = "GET",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "hlaSearchResults"
+                }))
+{
+    #region models
+    var requestInfo = new Jeevan.Models.RequestInfo()
+            {
+                Diagnosis = "cancer",
+                Gender = "Male",
+                Hospital = "Apollo",
+                PatientDateOfBirth = new DateTime(1990, 01, 01),
+                PatientName = "xyz",
+                PhysicanPhoneNumber = "9841012345",
+                PhysicianEmail = "house@apollo.com",
+                PhysicianName = "dr. House"
+            };
+    var HLA_type = new Jeevan.Models.CordBloodUnit() { HLA_A1 = 2, HLA_A2 = 24, HLA_B1 = 18, HLA_B2 = 40, DRB_1 = 11, DRB_2 = 14 };
+    #endregion 
+            <div id="patientInfo">
+            @Html.Partial("_RequestInfoPatient",requestInfo)
+        </div>
+        <div id="hlaInfo">
+            @Html.Partial("_Search", HLA_type)
+        </div>
+        <br /><br />
+            <div>
+                <input type="submit" name="proceed" value="Proceed" />
+                <input type="reset" name="cancel" value="Clear" />
+            </div>
+        }
+<div id="hlaSearchResults">
 </div>
 <script type="text/javascript">
     $(function () {
