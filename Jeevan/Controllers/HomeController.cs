@@ -72,7 +72,7 @@ namespace Jeevan.Controllers
 
         //
         // GET: /CordBlood/Create
-
+        [Authorize(Users = "drpsrinivasan,saranyanarayan")]
         public ActionResult Create()
         {
             return PartialView("Edit");
@@ -82,6 +82,7 @@ namespace Jeevan.Controllers
         // POST: /CordBlood/Create
 
         [HttpPost]
+        [Authorize(Users = "drpsrinivasan,saranyanarayan")]
         public ActionResult Create(CordBloodUnit cordbloodunit)
         {
             if (ModelState.IsValid)
@@ -96,7 +97,7 @@ namespace Jeevan.Controllers
 
         //
         // GET: /CordBlood/Edit/5
-
+        [Authorize(Users = "drpsrinivasan,saranyanarayan")]
         public ActionResult Edit(int id)
         {
             CordBloodUnit cordbloodunit = db.CordBloodUnits.Find(id);
@@ -107,6 +108,7 @@ namespace Jeevan.Controllers
         // POST: /CordBlood/Edit/5
 
         [HttpPost]
+        [Authorize(Users = "drpsrinivasan,saranyanarayan")]
         public ActionResult Edit(CordBloodUnit cordbloodunit)
         {
             if (ModelState.IsValid)
@@ -123,6 +125,7 @@ namespace Jeevan.Controllers
         // POST: /CordBlood/Delete/5
 
         [HttpPost]
+        [Authorize(Users = "drpsrinivasan,saranyanarayan")]
         public void Delete(int id)
         {
             CordBloodUnit cordbloodunit = db.CordBloodUnits.Find(id);

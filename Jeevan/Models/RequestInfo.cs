@@ -14,6 +14,7 @@ namespace Jeevan.Models
         public string PatientName { get; set; }
 
         [DisplayName("Patient's Date of birth")]
+        [DataType(DataType.Date)]
         public DateTime PatientDateOfBirth { get; set; }
 
         [Required]
