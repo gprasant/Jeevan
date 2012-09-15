@@ -151,6 +151,7 @@
     <Compile Include="Models\CordBloodUnit.cs" />
     <Compile Include="Database\JeevanDBContext.cs" />
     <Compile Include="Models\RequestInfo.cs" />
+    <Compile Include="Models\ViewModels\HLASearchResultsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -271,7 +272,7 @@
     <Content Include="Views\RequestInfo\ConfirmRequest.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\RequestInfo\SearchResults.cshtml" />
+    <Content Include="Views\RequestInfo\_SearchResults.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

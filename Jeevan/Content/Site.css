@@ -1,4 +1,9 @@
-﻿html {
+﻿ /*___________________ Custom _________________________*/
+        .align-right {
+          text-align: right;
+        }
+/*_____________Custom__________________________*/
+html {
     background-color: #e2e2e2;
     margin: 0;
     padding: 0;
@@ -634,4 +639,6 @@ ul#social li {
             text-indent: 0;
             width: auto;
         }
+
+       
 }

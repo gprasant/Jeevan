@@ -2,6 +2,7 @@
 using Jeevan.Attributes;
 using System.Linq;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Jeevan.Models
 {
@@ -10,26 +11,36 @@ namespace Jeevan.Models
         public int ID { get; set; }
         
         [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayName("HLA A1")]
         public int? HLA_A1 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayName("HLA A2")]
         public int? HLA_A2 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayName("HLA B1")]
         public int? HLA_B1 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayName("HLA B2")]
         public int? HLA_B2 { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayName("DRB 1")]
         public int DRB_1 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayName("DRB 2")]
         public int DRB_2 { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayName("HLA C1")]
         public int HLA_C1 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayName("HLA C2")]
         public int HLA_C2 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayName("DQB 1")]
         public int DQB_1 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayName("DQB 2")]
         public int DQB_2 { get; set; }
 
         public int GetMatchCount(CordBloodUnit other)

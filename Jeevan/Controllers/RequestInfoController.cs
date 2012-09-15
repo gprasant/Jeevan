@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Jeevan.Database;
 using Jeevan.Models;
+using Jeevan.Models.ViewModels;
 
 namespace Jeevan.Controllers
 {
@@ -47,14 +48,15 @@ namespace Jeevan.Controllers
                                                    .Where(unit =>
                                                              unit.DRB_1 == cordBloodUnit.DRB_1
                                                           && unit.DRB_2 == cordBloodUnit.DRB_2
-                                                          && (cordBloodUnit.HLA_A1.HasValue ? unit.HLA_A1 == cordBloodUnit.HLA_A1 : true)
-                                                          && (cordBloodUnit.HLA_A2.HasValue ? unit.HLA_A2 == cordBloodUnit.HLA_A2 : true)
-                                                          && (cordBloodUnit.HLA_B1.HasValue ? unit.HLA_B1 == cordBloodUnit.HLA_B1 : true)
-                                                          && (cordBloodUnit.HLA_B2.HasValue ? unit.HLA_B2 == cordBloodUnit.HLA_B2 : true)
+                                                          || (cordBloodUnit.HLA_A1.HasValue ? unit.HLA_A1 == cordBloodUnit.HLA_A1 : true)
+                                                          || (cordBloodUnit.HLA_A2.HasValue ? unit.HLA_A2 == cordBloodUnit.HLA_A2 : true)
+                                                          || (cordBloodUnit.HLA_B1.HasValue ? unit.HLA_B1 == cordBloodUnit.HLA_B1 : true)
+                                                          || (cordBloodUnit.HLA_B2.HasValue ? unit.HLA_B2 == cordBloodUnit.HLA_B2 : true)
                                                           ).ToList();
-                var results = searchResults.GroupBy(x => x.GetMatchCount(cordBloodUnit), cbu => cbu, (count, samples) => new{Count = count, Samples = samples})
-                    .Where(x => x.Count == 5 || x.Count == 6);
-                return PartialView("SearchResults", searchResults.Where(x => x.GetMatchCount(cordBloodUnit) == 5 || x.GetMatchCount(cordBloodUnit) == 6).ToList());
+
+                var model = new HLASearchResultsViewModel() { _5Matches = searchResults.Where(x => x.GetMatchCount(cordBloodUnit) == 5), _6Matches = searchResults.Where(x => x.GetMatchCount(cordBloodUnit) == 6) };
+
+                return PartialView("_SearchResults", model);
             }
             catch
             {
