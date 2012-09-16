@@ -25,13 +25,13 @@
     var HLA_type = new Jeevan.Models.CordBloodUnit() { HLA_A1 = 2, HLA_A2 = 24, HLA_B1 = 18, HLA_B2 = 40, DRB_1 = 11, DRB_2 = 14 };
     #endregion 
             <div id="patientInfo">
-            @Html.Partial("_RequestInfoPatient",requestInfo)
+            @Html.Partial("_RequestInfoPatient")
         </div>
     <div>
         <h3>Cord Blood Information</h3>
     </div>
         <div id="hlaInfo">
-            @Html.Partial("_Search", HLA_type)
+            @Html.Partial("_Search")
         </div>
         <br /><br />
             <div>

@@ -33,7 +33,6 @@ namespace Jeevan.Controllers
 
         public ActionResult Create()
         {
-            
             return View();
         }
 
