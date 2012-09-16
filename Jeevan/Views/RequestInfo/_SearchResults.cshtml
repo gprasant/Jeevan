@@ -65,4 +65,21 @@
         }
         </tbody>
        </table>
+    @if(Model._5Matches.Any() || Model._6Matches.Any())
+    {<button class="btn btn-success" id="sendEmail"> make a request </button>}
+    
 </div>
+<script type="text/javascript">
+    $("#sendEmail.btn").click(function () {
+        var formData = $("form").serialize();
+        $.ajax({
+            data: formData,
+            url: '@Url.Action("SendMail", "RequestInfo")',
+            method: 'GET'
+        }).success(function () {
+            window.URL='@Url.Action("Success", "RequestInfo")';
+        }
+        
+        );
+    });
+</script>

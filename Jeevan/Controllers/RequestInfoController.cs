@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Jeevan.Database;
 using Jeevan.Models;
 using Jeevan.Models.ViewModels;
+using Mvc.Mailer;
 
 namespace Jeevan.Controllers
 {
@@ -47,10 +48,12 @@ namespace Jeevan.Controllers
                                                    .Where(unit =>
                                                              unit.DRB_1 == cordBloodUnit.DRB_1
                                                           && unit.DRB_2 == cordBloodUnit.DRB_2
-                                                          || (cordBloodUnit.HLA_A1.HasValue ? unit.HLA_A1 == cordBloodUnit.HLA_A1 : true)
-                                                          || (cordBloodUnit.HLA_A2.HasValue ? unit.HLA_A2 == cordBloodUnit.HLA_A2 : true)
-                                                          || (cordBloodUnit.HLA_B1.HasValue ? unit.HLA_B1 == cordBloodUnit.HLA_B1 : true)
-                                                          || (cordBloodUnit.HLA_B2.HasValue ? unit.HLA_B2 == cordBloodUnit.HLA_B2 : true)
+                                                          &&( 
+                                                              (cordBloodUnit.HLA_A1.HasValue ? unit.HLA_A1 == cordBloodUnit.HLA_A1 : true)
+                                                              || (cordBloodUnit.HLA_A2.HasValue ? unit.HLA_A2 == cordBloodUnit.HLA_A2 : true)
+                                                              || (cordBloodUnit.HLA_B1.HasValue ? unit.HLA_B1 == cordBloodUnit.HLA_B1 : true)
+                                                              || (cordBloodUnit.HLA_B2.HasValue ? unit.HLA_B2 == cordBloodUnit.HLA_B2 : true)
+                                                            )
                                                           ).ToList();
 
                 var model = new HLASearchResultsViewModel() { _5Matches = searchResults.Where(x => x.GetMatchCount(cordBloodUnit) == 5), _6Matches = searchResults.Where(x => x.GetMatchCount(cordBloodUnit) == 6) };
@@ -115,6 +118,20 @@ namespace Jeevan.Controllers
             {
                 return View();
             }
+        }
+        private UserMailer _mailer = new UserMailer();
+
+        public UserMailer Mailer
+        {
+            get { return _mailer; }
+            set { _mailer = value; }
+        }
+
+        
+        public ActionResult SendMail(RequestInfo requestInfo, CordBloodUnit cordBloodUnit)
+        {
+            Mailer.Welcome().Send();
+            return new EmptyResult();
         }
     }
 }
