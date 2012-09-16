@@ -2,7 +2,6 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h3>Ajax Form</h3>
 @using (Ajax.BeginForm("HLAMatches",
                 new AjaxOptions()
                 {
@@ -28,6 +27,9 @@
             <div id="patientInfo">
             @Html.Partial("_RequestInfoPatient",requestInfo)
         </div>
+    <div>
+        <h3>Cord Blood Information</h3>
+    </div>
         <div id="hlaInfo">
             @Html.Partial("_Search", HLA_type)
         </div>

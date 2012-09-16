@@ -274,6 +274,9 @@
   <ItemGroup>
     <Content Include="Views\RequestInfo\_SearchResults.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\RequestInfo\EditorTemplates\_Gender.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

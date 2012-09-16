@@ -17,7 +17,7 @@ namespace Jeevan.Models
         [DataType(DataType.Date)]
         public DateTime PatientDateOfBirth { get; set; }
 
-        [Required]
+        [Required,UIHint("_Gender")]
         [DisplayName("Patient's Gender")]
         public string Gender { get; set; }
 
