@@ -1,38 +1,41 @@
 ﻿@model Jeevan.Models.ViewModels.HLASearchResultsViewModel
 <div id="hlaSearchResults">
    
-    <h3>6/6 Matches</h3>
-     <table class="table table-striped table-bordered">
-        <thead>            <tr>                <td>                    ID                </td>                <td>                    HLA A1                </td>                <td>                    HLA A2                </td>                <td>                    HLA B1                </td>                <td>                    HLA B2                </td>                <td>                    DRB 1                </td>                <td>                    DRB 2                </td>            </tr>        </thead>   
-        <tbody>
-        @foreach (var unit in Model._6Matches)
-        { 
-            <tr>
-                <td>
-                    @unit.ID
-                </td>
-                <td>
-                    @unit.HLA_A1
-                </td>
-                <td>
-                    @unit.HLA_A2
-                </td>
-                <td>
-                    @unit.HLA_B1
-                </td>
-                <td>
-                    @unit.HLA_B2
-                </td>
-                <td>
-                    @unit.DRB_1
-                </td>
-                <td>
-                    @unit.DRB_2
-                </td>
-            </tr>
-        }
-        </tbody>
-       </table>
+    
+    @if (Model._5Matches.Any() || Model._6Matches.Any())
+    {
+        <h3>6/6 Matches</h3>
+         <table class="table table-striped table-bordered">
+            <thead>            <tr>                <td>                    ID                </td>                <td>                    HLA A1                </td>                <td>                    HLA A2                </td>                <td>                    HLA B1                </td>                <td>                    HLA B2                </td>                <td>                    DRB 1                </td>                <td>                    DRB 2                </td>            </tr>        </thead>   
+            <tbody>
+            @foreach (var unit in Model._6Matches)
+            { 
+                <tr>
+                    <td>
+                        @unit.ID
+                    </td>
+                    <td>
+                        @unit.HLA_A1
+                    </td>
+                    <td>
+                        @unit.HLA_A2
+                    </td>
+                    <td>
+                        @unit.HLA_B1
+                    </td>
+                    <td>
+                        @unit.HLA_B2
+                    </td>
+                    <td>
+                        @unit.DRB_1
+                    </td>
+                    <td>
+                        @unit.DRB_2
+                    </td>
+                </tr>
+            }
+            </tbody>
+      </table>
     <h3>5/6 Matches</h3>
     <table class="table table-striped table-bordered">
         <thead>            <tr>                <td>                    ID                </td>                <td>                    HLA A1                </td>                <td>                    HLA A2                </td>                <td>                    HLA B1                </td>                <td>                    HLA B2                </td>                <td>                    DRB 1                </td>                <td>                    DRB 2                </td>           </tr>        </thead>   
@@ -65,8 +68,12 @@
         }
         </tbody>
        </table>
-    @if(Model._5Matches.Any() || Model._6Matches.Any())
-    {<button class="btn btn-success" id="sendEmail"> make a request </button>}
+        <button class="btn btn-success" id="sendEmail"> make a request </button>
+    }
+    else
+    {
+    <p><h3>Sorry :-( , No Matches found</h3></p>
+    }
     
 </div>
 <script type="text/javascript">

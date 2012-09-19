@@ -12,34 +12,35 @@ namespace Jeevan.Models
         
         [DisplayFormat(DataFormatString = "{0:D2}")]
         [DisplayName("HLA A1")]
+        [DataType(DataType.Text)]
         public int? HLA_A1 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}")]
-        [DisplayName("HLA A2")]
+        [DisplayName("HLA A2"),DataType(DataType.Text)]
         public int? HLA_A2 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}")]
-        [DisplayName("HLA B1")]
+        [DisplayName("HLA B1"), DataType(DataType.Text)]
         public int? HLA_B1 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}")]
-        [DisplayName("HLA B2")]
+        [DisplayName("HLA B2"), DataType(DataType.Text)]
         public int? HLA_B2 { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:D2}")]
-        [DisplayName("DRB 1")]
+        [DisplayName("DRB 1"), DataType(DataType.Text)]
         public int DRB_1 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}")]
-        [DisplayName("DRB 2")]
+        [DisplayName("DRB 2"), DataType(DataType.Text)]
         public int DRB_2 { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayFormat(DataFormatString = "{0:D2}"), DataType(DataType.Text)]
         [DisplayName("HLA C1")]
         public int HLA_C1 { get; set; }
-        [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayFormat(DataFormatString = "{0:D2}"), DataType(DataType.Text)]
         [DisplayName("HLA C2")]
         public int HLA_C2 { get; set; }
-        [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayFormat(DataFormatString = "{0:D2}"), DataType(DataType.Text)]
         [DisplayName("DQB 1")]
         public int DQB_1 { get; set; }
-        [DisplayFormat(DataFormatString = "{0:D2}")]
+        [DisplayFormat(DataFormatString = "{0:D2}"), DataType(DataType.Text)]
         [DisplayName("DQB 2")]
         public int DQB_2 { get; set; }
 
