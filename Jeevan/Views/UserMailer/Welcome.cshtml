@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Jeevan.Models.ViewModels.RequestInfoViewModel
+@{
     Layout = null;
 }
 
@@ -7,11 +8,22 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap-responsive.css" rel="stylesheet">
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
     <title>Welcome</title>
 </head>
 <body>
     <div>
-        <h3>This is the welcome page. </h3>
+ @{         #region models
+    
+    #endregion 
+    }
+        <div id="patientInfo">
+            @Html.DisplayFor(vm => vm.PatientInfo)
+        </div>
+        <div id="hlaInfo">    
+            @Html.DisplayFor(vm => vm.HLAType)
+        </div>
     </div>
 </body>
 </html>

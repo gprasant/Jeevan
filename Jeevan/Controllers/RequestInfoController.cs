@@ -40,7 +40,7 @@ namespace Jeevan.Controllers
         //
         // GET: /RequestInfo/HLAMatches
 
-        public ActionResult HLAMatches(RequestInfo info, CordBloodUnit cordBloodUnit)
+        public ActionResult HLAMatches(PatientInfo info, CordBloodUnit cordBloodUnit)
         {
             try
             {
@@ -128,7 +128,7 @@ namespace Jeevan.Controllers
         }
 
         
-        public ActionResult SendMail(RequestInfo requestInfo, CordBloodUnit cordBloodUnit)
+        public ActionResult SendMail(PatientInfo requestInfo, CordBloodUnit cordBloodUnit)
         {
             Mailer.Welcome().Send();
             return new EmptyResult();

@@ -155,8 +155,9 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\CordBloodUnit.cs" />
     <Compile Include="Database\JeevanDBContext.cs" />
-    <Compile Include="Models\RequestInfo.cs" />
+    <Compile Include="Models\PatientInfo.cs" />
     <Compile Include="Models\ViewModels\HLASearchResultsViewModel.cs" />
+    <Compile Include="Models\ViewModels\RequestInfoViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

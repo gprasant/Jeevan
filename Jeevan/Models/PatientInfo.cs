@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Jeevan.Models
 {
-    public class RequestInfo
+    public class PatientInfo
     {
         [Required]
         [DisplayName("Patient's Name")]
