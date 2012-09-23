@@ -287,6 +287,9 @@
   <ItemGroup>
     <Content Include="Views\UserMailer\Welcome.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\RequestInfo\Success.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

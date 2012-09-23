@@ -84,7 +84,7 @@
             url: '@Url.Action("SendMail", "RequestInfo")',
             method: 'GET'
         }).success(function () {
-            window.URL='@Url.Action("Success", "RequestInfo")';
+            window.location='@Url.Action("Success", "RequestInfo")';
         }
         
         );

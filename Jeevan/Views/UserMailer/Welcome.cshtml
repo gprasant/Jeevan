@@ -19,10 +19,69 @@
     #endregion 
     }
         <div id="patientInfo">
-            @Html.DisplayFor(vm => vm.PatientInfo)
+            <h3> Patient Information </h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td> Field </td>
+                        <td> Value </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Patient Name</td>
+                        <td>@Model.PatientInfo.PatientName</td>
+                    </tr>
+                    <tr>
+                        <td>Patient's date of birth </td>
+                        <td>@Model.PatientInfo.DateOfBirth.ToShortDateString()</td>
+                    </tr>
+                    <tr>
+                        <td> Patient's Gender </td>
+                        <td>@Model.PatientInfo.Gender</td>
+                    </tr>
+                    <tr>
+                        <td> Hospital </td>
+                        <td>@Model.PatientInfo.Hospital</td>
+                    </tr>
+                    <tr>
+                        <td> Physician's Name </td>
+                        <td>@Model.PatientInfo.PhysicianName</td>
+                    </tr>
+                    <tr>
+                        <td> Physician's Email </td>
+                        <td>@Model.PatientInfo.PhysicianEmail</td>
+                    </tr>
+                    <tr>
+                        <td> Physician's phone number </td>
+                        <td>@Model.PatientInfo.PhysicanPhoneNumber</td>
+                    </tr>
+                    <tr>
+                        <td> Diagnosis </t>d
+                        <td>@Model.PatientInfo.Diagnosis</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div id="hlaInfo">    
-            @Html.DisplayFor(vm => vm.HLAType)
+            <h3> HLA Type </h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td>HLA A1</td><td> HLA A2</td><td> HLA B1</td><td> HLA B2</td><td> HLA DRB 1</td><td> HLA DRB 2</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.HLAType.HLA_A1</td>
+                        <td>@Model.HLAType.HLA_A2</td>
+                        <td>@Model.HLAType.HLA_B1</td>
+                        <td>@Model.HLAType.HLA_B2</td>
+                        <td>@Model.HLAType.DRB_1</td>
+                        <td>@Model.HLAType.DRB_2</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </body>

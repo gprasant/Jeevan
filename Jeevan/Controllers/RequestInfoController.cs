@@ -37,6 +37,11 @@ namespace Jeevan.Controllers
             return View();
         }
 
+        public ViewResult Success()
+        {
+            return View();
+        }
+
         //
         // GET: /RequestInfo/HLAMatches
 
@@ -130,7 +135,8 @@ namespace Jeevan.Controllers
         
         public ActionResult SendMail(PatientInfo requestInfo, CordBloodUnit cordBloodUnit)
         {
-            Mailer.Welcome().Send();
+            var viewModel = new RequestInfoViewModel() { PatientInfo = requestInfo, HLAType = cordBloodUnit };
+            Mailer.Welcome(viewModel).Send();
             return new EmptyResult();
         }
     }

@@ -11,13 +11,14 @@ namespace Jeevan.Controllers
 {
     public class UserMailer : MailerBase
     {
-        public virtual MailMessage Welcome()
+        public virtual MailMessage Welcome(RequestInfoViewModel viewModel)
         {
             var mailMessage = new MailMessage { Subject = "Welcome" };
 
-            mailMessage.To.Add("nagu89@gmail.com");
+            mailMessage.To.Add("stemcell@jeevan.org");
+            mailMessage.CC.Add("saranya@jeevan.org");
             ViewBag.Data = "Welcome to Jeevan.org";
-            ViewData.Model = new RequestInfoViewModel() {PatientInfo= new Models.PatientInfo(), HLAType = new Models.CordBloodUnit() };
+            ViewData.Model = viewModel;
             PopulateBody(mailMessage, viewName: "Welcome");
 
             return mailMessage;
