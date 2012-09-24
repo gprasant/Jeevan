@@ -13,7 +13,7 @@ namespace Jeevan.Controllers
     {
         public virtual MailMessage Welcome(RequestInfoViewModel viewModel)
         {
-            var mailMessage = new MailMessage { Subject = "Welcome" };
+            var mailMessage = new MailMessage { Subject = "[Jeevan] Request for cord blood unit. " };
 
             mailMessage.To.Add("stemcell@jeevan.org");
             mailMessage.CC.Add("saranya@jeevan.org");
