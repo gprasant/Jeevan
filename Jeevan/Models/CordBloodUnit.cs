@@ -25,10 +25,10 @@ namespace Jeevan.Models
         public int? HLA_B2 { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:D2}")]
-        [DisplayName("DRB 1"), DataType(DataType.Text)]
+        [DisplayName("DRB 1a"), DataType(DataType.Text)]
         public int DRB_1 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}")]
-        [DisplayName("DRB 2"), DataType(DataType.Text)]
+        [DisplayName("DRB 1b"), DataType(DataType.Text)]
         public int DRB_2 { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:D2}"), DataType(DataType.Text)]
@@ -38,10 +38,10 @@ namespace Jeevan.Models
         [DisplayName("HLA C2")]
         public int HLA_C2 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}"), DataType(DataType.Text)]
-        [DisplayName("DQB 1")]
+        [DisplayName("DQB 1a")]
         public int DQB_1 { get; set; }
         [DisplayFormat(DataFormatString = "{0:D2}"), DataType(DataType.Text)]
-        [DisplayName("DQB 2")]
+        [DisplayName("DQB 1b")]
         public int DQB_2 { get; set; }
 
         public int GetMatchCount(CordBloodUnit other)
