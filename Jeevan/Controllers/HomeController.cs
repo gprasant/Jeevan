@@ -133,8 +133,13 @@ namespace Jeevan.Controllers
             db.SaveChanges();
         }
 
+        [AllowAnonymous]
+        public ViewResult About()
+        {
+            return View();
+        }
    
-
+        
         protected override void Dispose(bool disposing)
         {
             db.Dispose();
