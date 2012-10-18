@@ -19,6 +19,11 @@ namespace Jeevan.Controllers
     {
         private JeevanDBContext db = new JeevanDBContext();
 
+        public ViewResult Trouble()
+        {
+            return View("Error");
+        }
+
         //
         // GET: /CordBlood/
 
