@@ -19,7 +19,7 @@ namespace Jeevan
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            //filters.Add(new HandleErrorAttribute());
         }
 
         public static void RegisterRoutes(RouteCollection routes)
@@ -41,7 +41,7 @@ namespace Jeevan
 
         protected void Application_Start()
         {
-            System.Data.Entity.Database.SetInitializer(new RecreateDatabaseWithSeedData());
+            System.Data.Entity.Database.SetInitializer(new CreateDatabaseIfNotExists<JeevanDBContext>());
             //new LogEvent("Completed db Setup");
             AreaRegistration.RegisterAllAreas();
 
