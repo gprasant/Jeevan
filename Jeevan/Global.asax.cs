@@ -27,16 +27,19 @@ namespace Jeevan
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                            name: "DefaultApi",
+                   routeTemplate: "api/{controller}/{id}",
+                        defaults: new { id = RouteParameter.Optional }
             );
-
+            routes.MapRoute("manageRoute",
+                    url: "manage",
+               defaults: new { controller = "Home", action = "Index" });
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional }
+                    name: "Default",
+                     url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional }
             );
+           
         }
 
         protected void Application_Start()

@@ -26,7 +26,7 @@ namespace Jeevan.Controllers
 
         //
         // GET: /CordBlood/
-
+        [Authorize(Users = "drpsrinivasan,saranyanarayan,gprasant")]
         public ViewResult Index(int start = 0, int itemsPerPage = 20, string orderBy = "ID", bool desc = false)
         {
             ViewBag.Count = db.CordBloodUnits.Count();
