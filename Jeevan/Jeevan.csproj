@@ -198,6 +198,8 @@
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\BetheCure Logo new.jpg" />
+    <Content Include="Images\Jeevan-Logo.jpg" />
     <Content Include="InstallationDummyFile.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
