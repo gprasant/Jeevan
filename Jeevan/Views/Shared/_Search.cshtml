@@ -1,10 +1,21 @@
 ﻿@model Jeevan.Models.CordBloodUnit
 
+<style>
+    label {
+        margin-top: 5px;
+    }
+</style>
 @Html.ValidationSummary()<br />
+<div class="span0.5"><label> A1 </label></div>
 <div class="span1">@Html.TextBoxFor(cb => cb.HLA_A1, new{placeholder = " A1 ", @class = "HLASearchBox"}) </div>
+<div class="span0.5"><label> A2 </label></div>
 <div class="span1">@Html.TextBoxFor(cb => cb.HLA_A2, new{placeholder = " A2 ", @class = "HLASearchBox"})</div>
+<div class="span0.5"><label> B1 </label></div>
 <div class="span1">@Html.TextBoxFor(cb => cb.HLA_B1, new{placeholder = " B1 ", @class = "HLASearchBox"})</div>
+<div class="span0.5"><label> B2 </label></div>
 <div class="span1">@Html.TextBoxFor(cb => cb.HLA_B2, new{placeholder = " B2 ", @class = "HLASearchBox"})</div>
+<div class="span0.5"><label> DRB 1a </label></div>
 <div class="span1">@Html.TextBoxFor(cb => cb.DRB_1, new{placeholder = " DRB 1a ", @class = "HLASearchBox"})</div>
+<div class="span0.5"><label> DRB 1b </label></div>
 <div class="span1">@Html.TextBoxFor(cb => cb.DRB_2, new{placeholder = " DRB 1b ", @class = "HLASearchBox"})</div>
 <div class="span1"><button id="search" type="submit" class="btn btn-primary">Search</button></div>
