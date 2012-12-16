@@ -28,7 +28,9 @@
             @Html.Partial("_RequestInfoPatient")
         </div>
     <div>
-        <h3>Cord Blood Information</h3>
+        <br />
+
+        <h3>Patient's HLA Type</h3>
     </div>
         <div id="hlaInfo">
             @Html.Partial("_Search")
@@ -44,6 +46,12 @@
 <script type="text/javascript">
     $(function () {
         $("#search").hide();
+        $("#DateOfBirth").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "1950:2013",
+            maxDate: 0
+        });
     });
 
 </script>

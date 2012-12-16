@@ -198,6 +198,8 @@
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\BetheCure Logo new.jpg" />
+    <Content Include="Images\Jeevan-Logo.jpg" />
     <Content Include="InstallationDummyFile.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -250,7 +252,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

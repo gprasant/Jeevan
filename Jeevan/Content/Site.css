@@ -121,17 +121,27 @@ footer {
 /* site title
 ----------------------------------------------------------*/
 .site-title {
-    color: #c8c8c8;
+    color: rgba(253, 0, 0, 0.76);
     font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
     font-size: 2.3em;
     margin: 20px 0;
+    
+}
+
+.site-sub-title {
+    color: rgba(253, 0, 0, 0.76); 
+    text-align: center;  
+    padding-right: 40px;  
+    font-size: 2em;  
+    font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
 }
 
 .site-title a, .site-title a:hover, .site-title a:active {
     background: none;
-    color: #c8c8c8;
+    color: rgba(253, 0, 0, 0.76);
     outline: none;
     text-decoration: none;
+    font-weight: bold;
 }
 
 

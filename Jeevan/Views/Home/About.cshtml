@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Home";
 }
 
 <h2>About Jeevan Cord Blood Bank</h2>
@@ -16,13 +16,13 @@ Jeevan follows the quality systems recommended by <a href="http://www.netcord.or
 
 <li> Each unit is screened and found negative for HIV, HBV, HCV, (ELISA and Nucleic Acid Testing), HTLV Ab (ELISA), CMV IgM (ELISA), Syphilis, Malaria and Haemoglobinopathy screen.</li>
 
-<li> The units will have a TNCC count of 50 – 90 x 107 </li>
+<li> The units will have a TNCC count of 50 – 90 x 10<sup>7</sup> </li>
 
-<li> CD 34 count more than 1.25 x 106 </li>
+<li> CD 34 count more than 1.25 x 10<sup>6</sup> </li>
 
 <li> Viability of more than 85% at the time of cryo-preservation </li>
 
 </ol>
 
 <h2>How this site works?</h2>
-<p>This is a preliminary screen . When you search, you will be shown the number of matches available (6/6 followed by 5/6). If you find a match submit the information required for someone from Jeevan to get in touch with your Physician.</p>
+<p>This is a preliminary screen . When you <b>@Html.ActionLink("search", "Create", "RequestInfo")</b> you will be shown the number of matches available (6/6 followed by 5/6). If you find a match submit the information required for someone from Jeevan to get in touch with your Physician.</p>
