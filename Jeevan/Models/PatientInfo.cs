@@ -13,7 +13,7 @@ namespace Jeevan.Models
         [DisplayName("Patient's Name")]
         public string PatientName { get; set; }
 
-        [DisplayName("Patient's Date of birth")]
+        [DisplayName("Patient's Date of birth (mm/dd/yyyy) ")]
         public DateTime DateOfBirth { get; set; }
 
         [Required,UIHint("_Gender")]
