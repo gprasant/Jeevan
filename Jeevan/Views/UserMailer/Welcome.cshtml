@@ -32,10 +32,12 @@
                         <td>Patient Name</td>
                         <td>@Model.PatientInfo.PatientName</td>
                     </tr>
+                    if(@Model.PatientInfo.Age != null){
                     <tr>
-                        <td>Patient's date of birth </td>
-                        <td>@Model.PatientInfo.DateOfBirth.ToShortDateString()</td>
+                        <td>Patient's Age </td>
+                        <td>@Model.PatientInfo.Age</td>
                     </tr>
+                    }
                     <tr>
                         <td> Patient's Gender </td>
                         <td>@Model.PatientInfo.Gender</td>
