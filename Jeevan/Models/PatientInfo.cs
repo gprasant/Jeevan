@@ -13,8 +13,9 @@ namespace Jeevan.Models
         [DisplayName("Patient's Name")]
         public string PatientName { get; set; }
 
-        [DisplayName("Patient's Date of birth (mm/dd/yyyy) ")]
-        public DateTime DateOfBirth { get; set; }
+        [DisplayName("Patient's Age "),Range(0, 110)]
+        [DataType(DataType.Text)]
+        public int? Age { get; set; } 
 
         [Required,UIHint("_Gender")]
         [DisplayName("Patient's Gender")]
